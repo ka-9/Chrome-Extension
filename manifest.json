@@ -2,11 +2,11 @@
     "manifest_version": 3,
     "version": "1.0",
     "name": "Link Save",
+    "permissions": [
+        "tabs"
+    ],
     "action": {
         "default_popup": "index.html",
         "default_icon": "Assets/Images/database-solid.png"
-    },
-    "permissions": [
-        "tabs"
-    ]
+    }
 }
