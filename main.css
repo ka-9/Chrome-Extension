@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #ff71fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 20rem;
+}
+
+h1 {
+    font-family: 'Playfair display';
+    font-size: 1.25rem;
+}
+
+hr{
+    border: none;
+    border-bottom:  2px solid var(--primary-color);
+}
+
+#input-el {
+    display: block;
+    margin-bottom: 5px;
+    color: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+.title {
+    transition: .25s ease-in-out;
+}
+
+.title:hover {
+    color: var(--primary-color);
+}
+
+.btn {
+    margin: 10px 5px 5px 0;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: .75em;
+    transition: transform .25s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    /* box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+}
+
+.btn-secondary {
+    color: var(--primary-color);
+    background-color: #fff;
+    border: 3px solid var(--primary-color);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+#ul-el{
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#ul-el > li{
+    margin-top: 5px;
+}
+
+#ul-el a{
+    color: #000;
+}
