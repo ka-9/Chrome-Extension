@@ -32,6 +32,14 @@ if (leadsFromLocalStorage) { //checks if leadsFromLocalStorage is truthy
 //feature console.log(typeof myLead) returns datatype of argument
 
 //$Event Listeners
+
+//feature Executes on Enter btn
+inputEl.addEventListener("keypress", function(event) {
+    if(event.key === "Enter") {
+        inputBtn.click();
+    }
+})
+
 //SAVE INPUT
 inputBtn.addEventListener("click", function() {
     if(inputEl.value.length > 0) {
@@ -39,13 +47,6 @@ inputBtn.addEventListener("click", function() {
         inputEl.value = "";
         localStorage.setItem("myLead", JSON.stringify(myLead));
         render(myLead);
-    }
-})
-
-//feature Executes on Enter btn
-inputEl.addEventListener("keypress", function(event) {
-    if(event.key === "Enter") {
-        inputBtn.click();
     }
 })
 
