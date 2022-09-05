@@ -1,3 +1,5 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
+
 :root {
     --primary-color: #006eff;
 }
@@ -8,7 +10,7 @@
 
 body {
     margin: 0;
-    padding: 10px;
+    padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 20rem;
 }
@@ -31,6 +33,13 @@ hr{
     border-radius: 20px;
     width: 100%;
     padding: 10px;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
@@ -83,4 +92,19 @@ hr{
 
 #ul-el a{
     color: #000;
+}
+
+/* Icons */
+button.icon {
+    color: black;
+    font-size: 1.5rem;
+    background-color: #fff;
+    border: none;
+}
+
+/* Visibility */
+
+.invisible {
+    position: absolute;
+    opacity: 0;
 }
