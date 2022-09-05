@@ -14,6 +14,8 @@ const delBtn = document.getElementById("del-btn");
 const delAllBtn = document.getElementById("del-all-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
+const sunIcon = document.querySelector(".icon-sun");
+const moonIcon = document.querySelector(".icon-moon");
 
 //$Local Storage
 // localStorage.setItem("myLead", JSON.stringify(myLead)); myLead is an array
@@ -68,6 +70,17 @@ delAllBtn.addEventListener("click", function() {
     render(myLead);
     localStorage.clear();
 });
+
+//CHANGE THEME
+document.querySelectorAll('.icon').forEach(icon => icon.addEventListener("click", function() {
+    if (sunIcon.classList.contains('invisible')) {
+        sunIcon.classList.remove('invisible');
+        moonIcon.classList.add('invisible');
+    } else {
+        moonIcon.classList.remove('invisible');
+        sunIcon.classList.add('invisible');
+    }
+}))
 
 //feature This is how tabs url are represented in Chrome
 /* 
