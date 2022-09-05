@@ -1,7 +1,12 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
 
 :root {
-    --primary-color: #006eff;
+    --light-text-color-pr: #fff;
+    --light-text-color-sd: #006eff;
+    --light-bg-color-pr: #006eff;
+    --light-bg-color-sd: #fff;
+    --dark-bg-color-pr: #fff;
+    --dark-bg-color-sd: #000;
 }
 
 * {
@@ -22,14 +27,14 @@ h1 {
 
 hr{
     border: none;
-    border-bottom:  2px solid var(--primary-color);
+    border-bottom:  2px solid var(--light-text-color-sd);
 }
 
 #input-el {
     display: block;
     margin-bottom: 5px;
     color: none;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--light-text-color-sd);
     border-radius: 20px;
     width: 100%;
     padding: 10px;
@@ -47,7 +52,7 @@ hr{
 }
 
 .title:hover {
-    color: var(--primary-color);
+    color: var(--light-text-color-sd);
 }
 
 .btn {
@@ -60,16 +65,16 @@ hr{
 }
 
 .btn-primary {
-    color: #fff;
-    border: 1px solid var(--primary-color);
-    background-color: var(--primary-color);
+    color: var(--light-text-color-pr);
+    border: 1px solid var(--light-bg-color-pr);
+    background-color: var(--light-bg-color-pr);
     /* box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2); */
 }
 
 .btn-secondary {
-    color: var(--primary-color);
-    background-color: #fff;
-    border: 3px solid var(--primary-color);
+    color: var(--light-text-color-sd);
+    background-color: var(--light-bg-color-sd);
+    border: 3px solid var(--light-bg-color-pr);
 }
 
 .btn:hover {
@@ -96,9 +101,9 @@ hr{
 
 /* Icons */
 button.icon {
-    color: black;
+    color: var(--light-text-color-sd);
     font-size: 1.5rem;
-    background-color: #fff;
+    background-color: var(--light-bg-color-sd);
     border: none;
     transition: transform .1s ease-in-out; 
 }
