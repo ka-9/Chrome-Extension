@@ -53,7 +53,7 @@ inputBtn.addEventListener("click", function() {
 //DELETE LAST INPUT
 delBtn.addEventListener("click", function() {
     if(myLead.length > 0) {
-        ulEl.lastChild.parentNode.removeChild(ulEl.lastChild);
+        ulEl.lastElementChild.remove();
         myLead.pop();
         localStorage.setItem("myLead", JSON.stringify(myLead));
     }
