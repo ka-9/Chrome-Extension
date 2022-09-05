@@ -100,6 +100,15 @@ button.icon {
     font-size: 1.5rem;
     background-color: #fff;
     border: none;
+    transition: transform .1s ease-in-out; 
+}
+
+button.icon:hover {
+    transform: scale(1.3);
+}
+
+button.icon:active {
+    transform: scale(1);
 }
 
 /* Visibility */
