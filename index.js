@@ -14,10 +14,12 @@ const delBtn = document.getElementById("del-btn");
 const delAllBtn = document.getElementById("del-all-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
+const icons = document.querySelectorAll("icon");
 const sunIcon = document.querySelector(".icon-sun");
 const moonIcon = document.querySelector(".icon-moon");
-const btnPrimary = document.querySelectorAll(".btn-primary");
+const btnsPrimary = document.querySelectorAll(".btn-primary");
 const bodyEl = document.querySelector("body");
+const titleEl = document.querySelector(".title");
 
 //$Local Storage
 // localStorage.setItem("myLead", JSON.stringify(myLead)); myLead is an array
@@ -73,12 +75,14 @@ delAllBtn.addEventListener("click", function() {
     localStorage.clear();
 });
 
-//TODO CHANGE THEME
+//TODO CONTINUE CHANGING THEME
 document.querySelectorAll('.icon').forEach(icon => icon.addEventListener("click", function() {
     sunIcon.classList.toggle('invisible');
     moonIcon.classList.toggle('invisible');
     bodyEl.classList.toggle('dark-bg-sd');
-    bodyEl.classList.toggle('light-bg-sd');
+    titleEl.classList.toggle('dark-text-pr');
+    icons.forEach(icon => icon.classList.toggle('dark-bg-sd'));
+    
 }))
 
 //feature This is how tabs url are represented in Chrome

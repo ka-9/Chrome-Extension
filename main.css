@@ -1,5 +1,7 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
 
+/*TODO Replace all in-class colors / bg-colors with html classes*/
+
 :root {
     --light-text-pr: #fff;
     --light-text-sd: #006eff;
