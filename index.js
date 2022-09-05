@@ -16,6 +16,7 @@ const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 const sunIcon = document.querySelector(".icon-sun");
 const moonIcon = document.querySelector(".icon-moon");
+const btnPrimary = document.querySelectorAll(".btn-primary");
 
 //$Local Storage
 // localStorage.setItem("myLead", JSON.stringify(myLead)); myLead is an array
@@ -73,12 +74,18 @@ delAllBtn.addEventListener("click", function() {
 
 //CHANGE THEME
 document.querySelectorAll('.icon').forEach(icon => icon.addEventListener("click", function() {
-    if (sunIcon.classList.contains('invisible')) {
+    if (sunIcon.classList.contains('invisible')) { //dark mode
+        //icons switch
         sunIcon.classList.remove('invisible');
         moonIcon.classList.add('invisible');
-    } else {
+        //HTML backgrounds
+        document.querySelector('body').classList.replace('light-bg-sd', 'dark-bg-sd');
+
+    } else { //light mode
         moonIcon.classList.remove('invisible');
         sunIcon.classList.add('invisible');
+        document.querySelector('body').classList.replace('dark-bg-sd','light-bg-sd');
+
     }
 }))
 
