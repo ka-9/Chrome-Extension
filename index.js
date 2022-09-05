@@ -74,19 +74,8 @@ delAllBtn.addEventListener("click", function() {
 
 //CHANGE THEME
 document.querySelectorAll('.icon').forEach(icon => icon.addEventListener("click", function() {
-    if (sunIcon.classList.contains('invisible')) { //dark mode
-        //icons switch
-        sunIcon.classList.remove('invisible');
-        moonIcon.classList.add('invisible');
-        //HTML backgrounds
-        document.querySelector('body').classList.replace('light-bg-sd', 'dark-bg-sd');
-
-    } else { //light mode
-        moonIcon.classList.remove('invisible');
-        sunIcon.classList.add('invisible');
-        document.querySelector('body').classList.replace('dark-bg-sd','light-bg-sd');
-
-    }
+    sunIcon.classList.toggle('invisible');
+    moonIcon.classList.toggle('invisible');
 }))
 
 //feature This is how tabs url are represented in Chrome
