@@ -1,12 +1,14 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css";
 
 :root {
-    --light-text-color-pr: #fff;
-    --light-text-color-sd: #006eff;
-    --light-bg-color-pr: #006eff;
-    --light-bg-color-sd: #fff;
-    --dark-bg-color-pr: #fff;
-    --dark-bg-color-sd: #000;
+    --light-text-pr: #fff;
+    --light-text-sd: #006eff;
+    --light-bg-pr: #006eff;
+    --light-bg-sd: #fff;
+    --dark-text-pr: rgb(35, 210, 184);
+    --dark-text-sd: #ffffff;
+    --dark-bg-sd: rgb(72, 70, 86);
+    --dark-bg-pr: rgb(100, 104, 122);
 }
 
 * {
@@ -27,14 +29,14 @@ h1 {
 
 hr{
     border: none;
-    border-bottom:  2px solid var(--light-text-color-sd);
+    border-bottom:  2px solid var(--light-text-sd);
 }
 
 #input-el {
     display: block;
     margin-bottom: 5px;
     color: none;
-    border: 2px solid var(--light-text-color-sd);
+    border: 2px solid var(--light-text-sd);
     border-radius: 20px;
     width: 100%;
     padding: 10px;
@@ -52,7 +54,7 @@ hr{
 }
 
 .title:hover {
-    color: var(--light-text-color-sd);
+    color: var(--light-text-sd);
 }
 
 .btn {
@@ -65,16 +67,16 @@ hr{
 }
 
 .btn-primary {
-    color: var(--light-text-color-pr);
-    border: 1px solid var(--light-bg-color-pr);
-    background-color: var(--light-bg-color-pr);
+    color: var(--light-text-pr);
+    border: 1px solid var(--light-bg-pr);
+    background-color: var(--light-bg-pr);
     /* box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2); */
 }
 
 .btn-secondary {
-    color: var(--light-text-color-sd);
-    background-color: var(--light-bg-color-sd);
-    border: 3px solid var(--light-bg-color-pr);
+    color: var(--light-text-sd);
+    background-color: var(--light-bg-sd);
+    border: 3px solid var(--light-bg-pr);
 }
 
 .btn:hover {
@@ -101,9 +103,9 @@ hr{
 
 /* Icons */
 button.icon {
-    color: var(--light-text-color-sd);
+    color: var(--light-text-sd);
     font-size: 1.5rem;
-    background-color: var(--light-bg-color-sd);
+    background-color: var(--light-bg-sd);
     border: none;
     transition: transform .1s ease-in-out; 
 }
@@ -121,4 +123,37 @@ button.icon:active {
 .invisible {
     position: absolute;
     opacity: 0;
+}
+
+/* Colors Classes */
+.light-bg-pr {
+    background-color: var(--light-bg-pr);
+}
+
+.light-bg-sd {
+    background-color: var(--light-bg-sd);
+}
+
+.light-text-pr {
+    color: var(--light-text-pr);
+}
+
+.light-text-sd {
+    color: var(--light-text-sd);
+}
+
+.dark-bg-pr {
+    background-color: var(--dark-bg-pr);
+}
+
+.dark-bg-sd {
+    background-color: var(--dark-bg-sd);
+}
+
+.dark-text-pr {
+    color: var(--dark-text-pr);
+}
+
+.dark-text-sd {
+    color: var(--dark-text-sd);
 }
