@@ -8,9 +8,9 @@
     --light-bg-pr: #006eff;
     --light-bg-sd: #fff;
     --dark-text-pr: rgb(0, 166, 255);
-    --dark-text-sd: #ffffff;
-    --dark-bg-sd: rgb(72, 70, 86);
+    --dark-text-sd: #e0e0e0;
     --dark-bg-pr: rgb(100, 104, 122);
+    --dark-bg-sd: rgb(72, 70, 86);
 }
 
 * {
@@ -66,7 +66,6 @@ hr{
 
 .btn {
     margin: 10px 5px 5px 0;
-    border: 3px solid var(--light-bg-pr);
     padding: 10px;
     border-radius: 20px;
     font-weight: bold;
@@ -123,21 +122,39 @@ button.icon:active {
 .light-btn-pr {
     background-color: var(--light-bg-pr);
     color: var(--light-text-pr);
-
+    border: 3px solid var(--light-bg-pr);
 }
 
 .light-btn-sd {
     background-color: var(--light-bg-sd);
     color: var(--light-text-sd);
+    border: 3px solid var(--light-bg-pr);
+}
+
+.dark-text-pr{
+    color: var(--dark-text-pr);
+}
+
+.dark-text-sd{
+    color: var(--dark-text-sd);
+}
+
+.dark-bg-pr{
+    background-color: var(--dark-bg-pr);
+}
+
+.dark-bg-sd{
+    background-color: var(--dark-bg-sd);
 }
 
 .dark-btn-pr {
     background-color: var(--dark-bg-pr);
     color: var(--dark-text-pr);
+    border: 3px solid var(--dark-bg-pr);
 }
 
 .dark-btn-sd {
     background-color: var(--dark-bg-sd);
     color: var(--dark-text-sd);
-
+    border: 3px solid var(--dark-bg-pr);
 }

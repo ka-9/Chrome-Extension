@@ -14,10 +14,11 @@ const delBtn = document.getElementById("del-btn");
 const delAllBtn = document.getElementById("del-all-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
-const icons = document.querySelectorAll("icon");
+const icons = document.querySelectorAll(".icon");
 const sunIcon = document.querySelector(".icon-sun");
 const moonIcon = document.querySelector(".icon-moon");
-const btnsPrimary = document.querySelectorAll(".btn-primary");
+const btnsPr = document.querySelectorAll(".btn-pr");
+const btnsSd = document.querySelectorAll(".btn-sd");
 const bodyEl = document.querySelector("body");
 const titleEl = document.querySelector(".title");
 
@@ -81,8 +82,10 @@ document.querySelectorAll('.icon').forEach(icon => icon.addEventListener("click"
     moonIcon.classList.toggle('invisible');
     bodyEl.classList.toggle('dark-bg-sd');
     titleEl.classList.toggle('dark-text-pr');
-    icons.forEach(icon => icon.classList.toggle('dark-bg-sd'));
-    
+    icons.forEach(icon => icon.classList.toggle('dark-btn-sd'));
+    btnsPr.forEach(btnPr => btnPr.classList.toggle('dark-btn-pr'));
+    btnsSd.forEach(btnSd => btnSd.classList.toggle('dark-btn-sd'));
+
 }))
 
 //feature This is how tabs url are represented in Chrome
