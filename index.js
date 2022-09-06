@@ -76,16 +76,16 @@ delAllBtn.addEventListener("click", function() {
     localStorage.clear();
 });
 
-//TODO CONTINUE CHANGING THEME
+//Dark mode
 document.querySelectorAll('.icon').forEach(icon => icon.addEventListener("click", function() {
     sunIcon.classList.toggle('invisible');
     moonIcon.classList.toggle('invisible');
     bodyEl.classList.toggle('dark-bg-sd');
     titleEl.classList.toggle('dark-text-pr');
+    inputEl.classList.toggle('dark');
     icons.forEach(icon => icon.classList.toggle('dark-btn-sd'));
     btnsPr.forEach(btnPr => btnPr.classList.toggle('dark-btn-pr'));
     btnsSd.forEach(btnSd => btnSd.classList.toggle('dark-btn-sd'));
-
 }))
 
 //feature This is how tabs url are represented in Chrome
