@@ -4,13 +4,14 @@
 
 :root {
     --light-text-pr: #fff;
-    --light-text-sd: #006eff;
+    --light-text-sd: #0099ff;
     --light-bg-pr: #006eff;
     --light-bg-sd: #fff;
-    --dark-text-pr: rgb(0, 166, 255);
+    --dark-text-pr: rgb(255, 255, 255);
     --dark-text-sd: #e0e0e0;
     --dark-bg-pr: rgb(100, 104, 122);
     --dark-bg-sd: rgb(72, 70, 86);
+    --dark-border: rgb(184, 184, 184);
 }
 
 * {
@@ -22,6 +23,7 @@ body {
     padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 20rem;
+    transition: .25s ease-in-out;
 }
 
 h1 {
@@ -44,6 +46,11 @@ hr{
     padding: 10px;
 }
 
+#input-el.dark {
+    background-color: var(--dark-bg-pr);
+    border-color: var(--dark-border);
+}
+
 .container-flex {
     display: flex;
     flex-direction: row;
@@ -57,7 +64,7 @@ hr{
 
 
 .title.dark-text-pr:hover{
-    color: var(--dark-text-sd);
+    color: var(--light-text-sd);
 }
 
 .title:hover{
@@ -98,7 +105,8 @@ hr{
 /* Icons */
 button.icon {
     color: var(--light-text-sd);
-    font-size: 1.5rem;
+    background-color: transparent;
+    font-size: 2rem;
     border: none;
     transition: transform .1s ease-in-out; 
 }
@@ -158,3 +166,5 @@ button.icon:active {
     color: var(--dark-text-sd);
     border: 3px solid var(--dark-bg-pr);
 }
+
+/* Dark theme animations */
