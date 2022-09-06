@@ -4,13 +4,14 @@
 
 :root {
     --light-text-pr: #fff;
-    --light-text-sd: #006eff;
+    --light-text-sd: #0099ff;
     --light-bg-pr: #006eff;
     --light-bg-sd: #fff;
-    --dark-text-pr: rgb(35, 210, 184);
-    --dark-text-sd: #ffffff;
-    --dark-bg-sd: rgb(72, 70, 86);
+    --dark-text-pr: rgb(255, 255, 255);
+    --dark-text-sd: #e0e0e0;
     --dark-bg-pr: rgb(100, 104, 122);
+    --dark-bg-sd: rgb(72, 70, 86);
+    --dark-border: rgb(184, 184, 184);
 }
 
 * {
@@ -22,6 +23,7 @@ body {
     padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 20rem;
+    transition: .25s ease-in-out;
 }
 
 h1 {
@@ -44,6 +46,11 @@ hr{
     padding: 10px;
 }
 
+#input-el.dark {
+    background-color: var(--dark-bg-pr);
+    border-color: var(--dark-border);
+}
+
 .container-flex {
     display: flex;
     flex-direction: row;
@@ -55,7 +62,12 @@ hr{
     transition: .25s ease-in-out;
 }
 
-.title:hover {
+
+.title.dark-text-pr:hover{
+    color: var(--light-text-sd);
+}
+
+.title:hover{
     color: var(--light-text-sd);
 }
 
@@ -66,19 +78,6 @@ hr{
     font-weight: bold;
     font-size: .75em;
     transition: transform .25s ease-in-out;
-}
-
-.btn-primary {
-    color: var(--light-text-pr);
-    border: 1px solid var(--light-bg-pr);
-    background-color: var(--light-bg-pr);
-    /* box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2); */
-}
-
-.btn-secondary {
-    color: var(--light-text-sd);
-    background-color: var(--light-bg-sd);
-    border: 3px solid var(--light-bg-pr);
 }
 
 .btn:hover {
@@ -100,14 +99,18 @@ hr{
 }
 
 #ul-el a{
-    color: #000;
+    color: var(--light-text-sd);
+}
+
+#ul-el.dark a {
+    color: var(--dark-text-pr);
 }
 
 /* Icons */
 button.icon {
     color: var(--light-text-sd);
-    font-size: 1.5rem;
-    background-color: var(--light-bg-sd);
+    background-color: transparent;
+    font-size: 2rem;
     border: none;
     transition: transform .1s ease-in-out; 
 }
@@ -127,3 +130,56 @@ button.icon:active {
     opacity: 0;
 }
 
+/* Colors Classes */
+.light-btn-pr {
+    background-color: var(--light-bg-pr);
+    color: var(--light-text-pr);
+    border: 2px solid var(--light-bg-pr);
+}
+
+.light-btn-sd {
+    background-color: var(--light-bg-sd);
+    color: var(--light-text-sd);
+    border: 2px solid var(--light-bg-pr);
+}
+
+.dark-text-pr{
+    color: var(--dark-text-pr);
+}
+
+.dark-text-sd{
+    color: var(--dark-text-sd);
+}
+
+.dark-bg-pr{
+    background-color: var(--dark-bg-pr);
+}
+
+.dark-bg-sd{
+    background-color: var(--dark-bg-sd);
+}
+
+.dark-btn-pr {
+    background-color: var(--dark-bg-pr);
+    color: var(--dark-text-pr);
+    border: 2px solid var(--dark-bg-pr);
+}
+
+.dark-btn-sd {
+    background-color: var(--dark-bg-sd);
+    color: var(--dark-text-sd);
+    border: 2px solid var(--dark-bg-pr);
+}
+
+/* Dark theme animations */
+.dark-btn-pr:hover {
+    background-color: rgb(105, 110, 128);
+}
+
+.dark-btn-sd:hover {
+    border-color: rgb(105, 110, 128);
+}
+
+.dark-btn-pr:hover, .dark-btn-sd:hover {
+    color: var(--light-text-pr);
+}
