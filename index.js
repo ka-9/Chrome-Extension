@@ -74,6 +74,7 @@ delAllBtn.addEventListener("click", function() {
         myLead.pop();
     }
     render(myLead);
+    currentTheme = JSON.parse(localStorage.getItem("myTheme"));
     localStorage.clear();
     localStorage.setItem("myTheme", JSON.stringify(currentTheme));
 });
