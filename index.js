@@ -14,12 +14,6 @@ const delBtn = document.getElementById("del-btn");
 const delAllBtn = document.getElementById("del-all-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
-const icons = document.querySelectorAll("icon");
-const sunIcon = document.querySelector(".icon-sun");
-const moonIcon = document.querySelector(".icon-moon");
-const btnsPrimary = document.querySelectorAll(".btn-primary");
-const bodyEl = document.querySelector("body");
-const titleEl = document.querySelector(".title");
 
 //$Local Storage
 // localStorage.setItem("myLead", JSON.stringify(myLead)); myLead is an array
