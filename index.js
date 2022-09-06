@@ -6,6 +6,7 @@
 let myLead = [];
 let length = 0;
 let listItems;
+let currentTheme;
 
 //If possible, use const. If not, use let.
 const inputBtn = document.getElementById("input-btn");
@@ -74,18 +75,19 @@ delAllBtn.addEventListener("click", function() {
     }
     render(myLead);
     localStorage.clear();
+    localStorage.setItem("myTheme", JSON.stringify(currentTheme));
 });
 
-//Dark mode
+//DARK MODE
 document.querySelectorAll('.icon').forEach(icon => icon.addEventListener("click", function() {
-    sunIcon.classList.toggle('invisible');
-    moonIcon.classList.toggle('invisible');
-    bodyEl.classList.toggle('dark-bg-sd');
-    titleEl.classList.toggle('dark-text-pr');
-    inputEl.classList.toggle('dark');
-    icons.forEach(icon => icon.classList.toggle('dark-btn-sd'));
-    btnsPr.forEach(btnPr => btnPr.classList.toggle('dark-btn-pr'));
-    btnsSd.forEach(btnSd => btnSd.classList.toggle('dark-btn-sd'));
+    if(sunIcon.classList.contains('invisible')) {
+        currentTheme = "dark";
+        localStorage.setItem("myTheme", JSON.stringify(currentTheme));
+    } else {
+        currentTheme = "light";
+        localStorage.setItem("myTheme", JSON.stringify(currentTheme));
+    }
+    toggleTheme();
 }))
 
 //feature This is how tabs url are represented in Chrome
@@ -124,3 +126,20 @@ function render(leads) {
     li.textContent = myLead[i]
     ulEl.append(li);  
     */
+
+//feature switches between light and dark themes 
+function toggleTheme() {
+    sunIcon.classList.toggle('invisible');
+    moonIcon.classList.toggle('invisible');
+    bodyEl.classList.toggle('dark-bg-sd');
+    titleEl.classList.toggle('dark-text-pr');
+    inputEl.classList.toggle('dark');
+    ulEl.classList.toggle('dark');
+    btnsPr.forEach(btnPr => btnPr.classList.toggle('dark-btn-pr'));
+    btnsSd.forEach(btnSd => btnSd.classList.toggle('dark-btn-sd'));
+}
+
+//$ Remember the last active theme after refreshing  
+if ((JSON.parse(localStorage.getItem('myTheme'))) === "dark") { 
+    toggleTheme();
+};
