@@ -7,6 +7,6 @@
     ],
     "action": {
         "default_popup": "index.html",
-        "default_icon": "Assets/Images/database-solid.png"
+        "default_icon": "Assets/Images/ext_icon.png"
     }
 }
