@@ -55,7 +55,12 @@ hr{
     transition: .25s ease-in-out;
 }
 
-.title:hover {
+
+.title.dark-text-pr:hover{
+    color: var(--dark-text-sd);
+}
+
+.title:hover{
     color: var(--light-text-sd);
 }
 
