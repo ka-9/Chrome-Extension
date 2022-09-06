@@ -120,34 +120,24 @@ button.icon:active {
 }
 
 /* Colors Classes */
-.light-bg-pr {
+.light-btn-pr {
     background-color: var(--light-bg-pr);
-}
-
-.light-bg-sd {
-    background-color: var(--light-bg-sd);
-}
-
-.light-text-pr {
     color: var(--light-text-pr);
+
 }
 
-.light-text-sd {
+.light-btn-sd {
+    background-color: var(--light-bg-sd);
     color: var(--light-text-sd);
 }
 
-.dark-bg-pr {
+.dark-btn-pr {
     background-color: var(--dark-bg-pr);
-}
-
-.dark-bg-sd {
-    background-color: var(--dark-bg-sd);
-}
-
-.dark-text-pr {
     color: var(--dark-text-pr);
 }
 
-.dark-text-sd {
+.dark-btn-sd {
+    background-color: var(--dark-bg-sd);
     color: var(--dark-text-sd);
+
 }
