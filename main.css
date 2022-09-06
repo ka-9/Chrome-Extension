@@ -99,7 +99,11 @@ hr{
 }
 
 #ul-el a{
-    color: #000;
+    color: var(--light-text-sd);
+}
+
+#ul-el.dark a {
+    color: var(--dark-text-pr);
 }
 
 /* Icons */
@@ -130,13 +134,13 @@ button.icon:active {
 .light-btn-pr {
     background-color: var(--light-bg-pr);
     color: var(--light-text-pr);
-    border: 3px solid var(--light-bg-pr);
+    border: 2px solid var(--light-bg-pr);
 }
 
 .light-btn-sd {
     background-color: var(--light-bg-sd);
     color: var(--light-text-sd);
-    border: 3px solid var(--light-bg-pr);
+    border: 2px solid var(--light-bg-pr);
 }
 
 .dark-text-pr{
@@ -158,13 +162,24 @@ button.icon:active {
 .dark-btn-pr {
     background-color: var(--dark-bg-pr);
     color: var(--dark-text-pr);
-    border: 3px solid var(--dark-bg-pr);
+    border: 2px solid var(--dark-bg-pr);
 }
 
 .dark-btn-sd {
     background-color: var(--dark-bg-sd);
     color: var(--dark-text-sd);
-    border: 3px solid var(--dark-bg-pr);
+    border: 2px solid var(--dark-bg-pr);
 }
 
 /* Dark theme animations */
+.dark-btn-pr:hover {
+    background-color: rgb(105, 110, 128);
+}
+
+.dark-btn-sd:hover {
+    border-color: rgb(105, 110, 128);
+}
+
+.dark-btn-pr:hover, .dark-btn-sd:hover {
+    color: var(--light-text-pr);
+}
