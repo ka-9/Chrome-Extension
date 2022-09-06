@@ -127,35 +127,3 @@ button.icon:active {
     opacity: 0;
 }
 
-/* Colors Classes */
-.light-bg-pr {
-    background-color: var(--light-bg-pr);
-}
-
-.light-bg-sd {
-    background-color: var(--light-bg-sd);
-}
-
-.light-text-pr {
-    color: var(--light-text-pr);
-}
-
-.light-text-sd {
-    color: var(--light-text-sd);
-}
-
-.dark-bg-pr {
-    background-color: var(--dark-bg-pr);
-}
-
-.dark-bg-sd {
-    background-color: var(--dark-bg-sd);
-}
-
-.dark-text-pr {
-    color: var(--dark-text-pr);
-}
-
-.dark-text-sd {
-    color: var(--dark-text-sd);
-}
