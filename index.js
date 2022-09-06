@@ -69,15 +69,6 @@ delAllBtn.addEventListener("click", function() {
     localStorage.clear();
 });
 
-//TODO CONTINUE CHANGING THEME
-document.querySelectorAll('.icon').forEach(icon => icon.addEventListener("click", function() {
-    sunIcon.classList.toggle('invisible');
-    moonIcon.classList.toggle('invisible');
-    bodyEl.classList.toggle('dark-bg-sd');
-    titleEl.classList.toggle('dark-text-pr');
-    icons.forEach(icon => icon.classList.toggle('dark-bg-sd'));
-    
-}))
 
 //feature This is how tabs url are represented in Chrome
 /* 
